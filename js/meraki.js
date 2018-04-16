@@ -39,6 +39,7 @@ function authUser(){
 }
 
 // Button handler function to store the form data and login. 
+/*
 function login(){
     // send the data somewhere like a database
     var data = {};
@@ -50,6 +51,7 @@ function login(){
     // Complete Login
     authUser();
 }
+*/
 
 // Helper function to parse URL
 function GetURLParameter(sParam)

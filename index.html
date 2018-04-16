@@ -24,9 +24,20 @@ LICENSE: MIT
     <head>
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
-    <form id="loginForm" action="#">
-      <center><img src="./img/wait.gif" width="100%"/></center>
-      <br>
-    </form>
-    <script src="./js/meraki.js"></script>
+    <body>
+      <center><img src="./img/wait.gif" width="50%"/></center>
+      <script>
+        // Parse paramaters
+        var base_grant_url = decodeURIComponent(GetURLParameter("base_grant_url"));
+        var user_continue_url = decodeURIComponent(GetURLParameter("user_continue_url"));
+        var node_mac = GetURLParameter("node_mac");
+        var client_ip = GetURLParameter("client_ip");
+        var client_mac = GetURLParameter("client_mac");
+
+        var loginUrl = base_grant_url+"?continue_url="+user_continue_url;
+
+        // redirect browser to meraki auth URL.
+        window.location.replace(loginUrl);
+      </script>
+    </body>
 </html>

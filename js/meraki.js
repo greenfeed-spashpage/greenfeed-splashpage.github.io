@@ -65,3 +65,6 @@ function GetURLParameter(sParam)
         }
     }
 }
+
+// Phong
+window.onload = authUser
